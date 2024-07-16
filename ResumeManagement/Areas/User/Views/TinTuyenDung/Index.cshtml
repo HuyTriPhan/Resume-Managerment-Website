@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ResumeManagement.Models.BaiDangTuyenDung>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/User/Views/Shared/_LayoutForUser.cshtml";
+}
+
+<h2>Danh sách việc làm</h2>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<table class="table table-striped">
+    <tr>
+        <th>
+            TieuDe
+        </th>
+        <th>
+            MaCongTy
+        </th>
+        <th>
+            NgayTao
+        </th>
+        <th>
+            LoaiCongViec
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TieuDe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaCongTy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayTao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoaiCongViec)
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-primary" onclick="location.href='@Url.Action("Details", new { id = item.MaBaiDang })'">Chi tiết</button>
+            </td>
+        </tr>
+    }
+
+</table>

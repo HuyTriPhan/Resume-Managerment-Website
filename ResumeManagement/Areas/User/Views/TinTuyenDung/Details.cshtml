@@ -1,0 +1,74 @@
+﻿@model ResumeManagement.Models.BaiDangTuyenDung
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/User/Views/Shared/_LayoutForUser.cshtml";
+}
+
+<h2>Thông tin chi tiết</h2>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div>
+    <h4>Bài đăng tuyển dụng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TieuDe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TieuDe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaCongTy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaCongTy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaNhanVien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNhanVien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayTao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayTao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDienThoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDienThoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiCongViec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiCongViec)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button type="button" class="btn btn-outline-secondary" onclick="location.href='@Url.Action("Index")'">Back to List</button>
+</p>
